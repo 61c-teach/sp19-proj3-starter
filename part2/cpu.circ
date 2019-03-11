@@ -221,7 +221,7 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <circ-port height="10" pin="1550,170" width="10" x="265" y="45"/>
       <circ-port height="10" pin="1640,170" width="10" x="305" y="45"/>
       <circ-port height="10" pin="1730,170" width="10" x="345" y="45"/>
-      <circ-port height="10" pin="290,160" width="10" x="375" y="55"/>
+      <circ-port height="10" pin="290,160" width="10" x="375" y="165"/>
       <circ-anchor facing="east" height="6" width="6" x="367" y="167"/>
     </appear>
     <wire from="(1750,190)" to="(1790,190)"/>
