@@ -213,7 +213,6 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="89" y="124">instruction</text>
       <circ-port height="8" pin="520,170" width="8" x="46" y="116"/>
       <circ-port height="8" pin="570,270" width="8" x="86" y="286"/>
-      <circ-port height="10" pin="260,160" width="10" x="375" y="165"/>
       <circ-port height="10" pin="1100,170" width="10" x="65" y="45"/>
       <circ-port height="10" pin="1190,170" width="10" x="105" y="45"/>
       <circ-port height="10" pin="1280,170" width="10" x="145" y="45"/>
@@ -222,51 +221,54 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <circ-port height="10" pin="1550,170" width="10" x="265" y="45"/>
       <circ-port height="10" pin="1640,170" width="10" x="305" y="45"/>
       <circ-port height="10" pin="1730,170" width="10" x="345" y="45"/>
+      <circ-port height="10" pin="290,160" width="10" x="375" y="55"/>
       <circ-anchor facing="east" height="6" width="6" x="367" y="167"/>
     </appear>
-    <wire from="(190,240)" to="(380,240)"/>
     <wire from="(1750,190)" to="(1790,190)"/>
     <wire from="(1040,70)" to="(1790,70)"/>
     <wire from="(380,240)" to="(380,310)"/>
-    <wire from="(230,390)" to="(230,460)"/>
-    <wire from="(150,400)" to="(150,410)"/>
-    <wire from="(230,500)" to="(230,510)"/>
+    <wire from="(170,390)" to="(170,460)"/>
+    <wire from="(170,500)" to="(170,510)"/>
+    <wire from="(90,400)" to="(90,410)"/>
     <wire from="(590,190)" to="(590,260)"/>
+    <wire from="(200,240)" to="(380,240)"/>
     <wire from="(570,270)" to="(610,270)"/>
-    <wire from="(230,380)" to="(340,380)"/>
-    <wire from="(340,380)" to="(340,460)"/>
-    <wire from="(140,360)" to="(140,380)"/>
+    <wire from="(170,380)" to="(280,380)"/>
+    <wire from="(280,380)" to="(280,460)"/>
+    <wire from="(80,360)" to="(80,380)"/>
+    <wire from="(170,360)" to="(170,380)"/>
     <wire from="(1040,190)" to="(1080,190)"/>
     <wire from="(1660,190)" to="(1710,190)"/>
     <wire from="(590,280)" to="(590,310)"/>
-    <wire from="(230,360)" to="(230,380)"/>
+    <wire from="(210,130)" to="(210,150)"/>
     <wire from="(1480,190)" to="(1530,190)"/>
     <wire from="(590,70)" to="(590,150)"/>
     <wire from="(1570,190)" to="(1620,190)"/>
     <wire from="(1390,190)" to="(1440,190)"/>
     <wire from="(1210,190)" to="(1260,190)"/>
     <wire from="(1300,190)" to="(1350,190)"/>
-    <wire from="(250,130)" to="(250,160)"/>
     <wire from="(1120,190)" to="(1170,190)"/>
-    <wire from="(140,380)" to="(170,380)"/>
+    <wire from="(210,150)" to="(240,150)"/>
     <wire from="(1790,70)" to="(1790,190)"/>
-    <wire from="(140,360)" to="(230,360)"/>
-    <wire from="(190,140)" to="(190,240)"/>
-    <wire from="(310,460)" to="(340,460)"/>
+    <wire from="(80,380)" to="(110,380)"/>
+    <wire from="(250,460)" to="(280,460)"/>
+    <wire from="(80,360)" to="(170,360)"/>
+    <wire from="(200,140)" to="(200,240)"/>
     <wire from="(380,310)" to="(590,310)"/>
-    <wire from="(340,460)" to="(360,460)"/>
-    <wire from="(150,400)" to="(170,400)"/>
-    <wire from="(210,390)" to="(230,390)"/>
-    <wire from="(230,460)" to="(250,460)"/>
-    <wire from="(210,510)" to="(230,510)"/>
-    <wire from="(230,500)" to="(250,500)"/>
-    <wire from="(190,70)" to="(190,120)"/>
-    <wire from="(190,70)" to="(590,70)"/>
-    <wire from="(140,410)" to="(150,410)"/>
-    <wire from="(250,160)" to="(260,160)"/>
+    <wire from="(280,460)" to="(300,460)"/>
+    <wire from="(90,400)" to="(110,400)"/>
+    <wire from="(150,390)" to="(170,390)"/>
+    <wire from="(170,460)" to="(190,460)"/>
+    <wire from="(150,510)" to="(170,510)"/>
+    <wire from="(170,500)" to="(190,500)"/>
+    <wire from="(190,130)" to="(210,130)"/>
+    <wire from="(200,70)" to="(200,120)"/>
+    <wire from="(280,160)" to="(290,160)"/>
+    <wire from="(230,170)" to="(240,170)"/>
     <wire from="(1040,70)" to="(1040,190)"/>
     <wire from="(520,170)" to="(600,170)"/>
-    <wire from="(180,130)" to="(250,130)"/>
+    <wire from="(80,410)" to="(90,410)"/>
+    <wire from="(200,70)" to="(590,70)"/>
     <comp lib="0" loc="(1460,170)" name="Pin">
       <a name="facing" val="south"/>
       <a name="output" val="true"/>
@@ -323,20 +325,8 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <a name="label" val="ra"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(180,130)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
-      <a name="label" val="fetch_addr"/>
-    </comp>
     <comp lib="0" loc="(570,270)" name="Pin">
       <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(260,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="32"/>
-      <a name="label" val="FETCH_ADDRESS"/>
-      <a name="labelloc" val="south"/>
     </comp>
     <comp lib="6" loc="(273,98)" name="Text">
       <a name="text" val="Output"/>
@@ -356,14 +346,6 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <a name="label" val="INSTRUCTION"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="4" loc="(250,430)" name="Register">
-      <a name="width" val="32"/>
-      <a name="label" val="PC"/>
-    </comp>
-    <comp lib="6" loc="(899,643)" name="Text">
-      <a name="text" val="It is OK to move the PC, RegFile, ALU, and MEM to wherever is most convenient for you when constructing your CPU, and to delete this text"/>
-      <a name="font" val="SansSerif plain 22"/>
-    </comp>
     <comp lib="6" loc="(1423,48)" name="Text">
       <a name="text" val="Inputs/Outputs from run.circ. DO NOT MOVE THESE."/>
       <a name="font" val="SansSerif bold 22"/>
@@ -372,28 +354,57 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <a name="text" val="Inputs/Outputs from run.circ. DO NOT MOVE THESE."/>
       <a name="font" val="SansSerif bold 22"/>
     </comp>
-    <comp lib="8" loc="(840,470)" name="main">
-      <a name="label" val="RegFile"/>
-    </comp>
-    <comp lib="0" loc="(360,460)" name="Tunnel">
-      <a name="width" val="32"/>
-      <a name="label" val="fetch_addr"/>
-    </comp>
-    <comp lib="3" loc="(210,390)" name="Adder">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(140,410)" name="Constant">
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="0" loc="(210,510)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
-    </comp>
     <comp lib="9" loc="(1530,420)" name="main">
       <a name="label" val="DMEM"/>
     </comp>
     <comp lib="7" loc="(1210,430)" name="alu">
       <a name="label" val="Arithmetic_Logic_Unit"/>
+    </comp>
+    <comp lib="0" loc="(290,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="FETCH_ADDRESS"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="0" loc="(150,510)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="4" loc="(190,430)" name="Register">
+      <a name="width" val="32"/>
+      <a name="label" val="PC"/>
+    </comp>
+    <comp lib="3" loc="(150,390)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(80,410)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0x4"/>
+    </comp>
+    <comp lib="0" loc="(300,460)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="PROGRAM_COUNTER"/>
+    </comp>
+    <comp lib="0" loc="(190,130)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="PROGRAM_COUNTER"/>
+    </comp>
+    <comp lib="3" loc="(280,160)" name="Shifter">
+      <a name="width" val="32"/>
+      <a name="shift" val="lr"/>
+    </comp>
+    <comp lib="0" loc="(230,170)" name="Constant">
+      <a name="width" val="5"/>
+      <a name="value" val="0x2"/>
+    </comp>
+    <comp lib="8" loc="(920,460)" name="main">
+      <a name="label" val="RegFile"/>
+    </comp>
+    <comp lib="6" loc="(715,628)" name="Text">
+      <a name="text" val="It is OK to move the PC, RegFile, ALU, and MEM to wherever is most convenient for you when constructing your CPU, and to delete this text"/>
+      <a name="font" val="SansSerif plain 22"/>
     </comp>
   </circuit>
 </project>

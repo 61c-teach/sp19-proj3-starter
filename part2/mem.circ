@@ -163,7 +163,8 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <a name="fanout" val="1"/>
       <a name="incoming" val="32"/>
       <a name="appear" val="center"/>
-      <a name="bit1" val="0"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
       <a name="bit2" val="0"/>
       <a name="bit3" val="0"/>
       <a name="bit4" val="0"/>
@@ -176,8 +177,8 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
       <a name="bit11" val="0"/>
       <a name="bit12" val="0"/>
       <a name="bit13" val="0"/>
-      <a name="bit14" val="none"/>
-      <a name="bit15" val="none"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
       <a name="bit16" val="none"/>
       <a name="bit17" val="none"/>
       <a name="bit18" val="none"/>
