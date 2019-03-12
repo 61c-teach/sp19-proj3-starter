@@ -46,7 +46,7 @@ def main(assembly_files, num_cycles):
             print("-----From stderr-----")
             with open(error_file_name, "r+") as f:
                 print(f.read())
-            os.system("rm -f " + error_file_name)
+            os.system("rm -f " + error_file_name + " " + ref_output)
             continue
         os.system("rm -f " + error_file_name)
 
