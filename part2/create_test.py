@@ -7,6 +7,7 @@ import re
 def main(assembly_files, num_cycles):
 
     for assembly_file in assembly_files:
+        print("Making test for {}...".format(assembly_file))
 
         trace_format = "%1%\t%2%\t%5%\t%6%\t%7%\t%8%\t%9%\t%10%\t%pc%\t%inst%\t%line%\n"
 
@@ -26,12 +27,28 @@ def main(assembly_files, num_cycles):
         if not os.path.exists("my_tests/input"):
             os.makedirs("my_tests/input")
 
+        error_file_name = "err.log"
         # Creates ref file
         if num_cycles == -1:
-            os.system("java -jar venus-jvm-latest.jar -t -tf trace_format -ti -tw -ts -r " + assembly_file + " > " + ref_output)
+            cmd = "java -jar venus-jvm-latest.jar " + assembly_file + " -t -tf trace_format -ti -tw -ts -ur > " + ref_output + " 2> " + error_file_name
         else:
-            os.system("java -jar venus-jvm-latest.jar -t -tf trace_format -ti -tw -ts -r -tn " + str(num_cycles + 1) + " " + assembly_file + " > " + ref_output)
+            cmd = "java -jar venus-jvm-latest.jar " + assembly_file + " -t -tf trace_format -ti -tw -ts -ur -tn " + str(num_cycles + 1) + " > " + ref_output + " 2> " + error_file_name
+        # print("Runninc command: " + cmd)
+        retcode = os.system(cmd)
         os.system("rm -f trace_format")
+        if retcode:
+            print("Failed to make a test for the file '" + assembly_file + "'! Here is the reason:")
+            print("Could not get trace from venus!")
+            print("Here are some more details which may help.\n")
+            print("-----From stdout-----")
+            with open(ref_output, "r+") as f:
+                print(f.read())
+            print("-----From stderr-----")
+            with open(error_file_name, "r+") as f:
+                print(f.read())
+            os.system("rm -f " + error_file_name)
+            continue
+        os.system("rm -f " + error_file_name)
 
         # Creates hex file
         os.system("java -jar venus-jvm-latest.jar -d " + assembly_file + " > " + hex_file)
