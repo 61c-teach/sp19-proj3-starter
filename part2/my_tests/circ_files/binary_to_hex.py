@@ -8,7 +8,10 @@ def main(args):
 	file = open(args[1])
 	lines = [l for l in file.readlines()]
 	def mapper(strr):
-		return hex(int(strr, 2))[2:]
+		try: 
+			return hex(int(strr, 2))[2:]
+		except Exception: 
+			return 'x'
 	results = []
 	for l in lines:
 		hexes = list(map(mapper,l.split()))
@@ -22,15 +25,13 @@ def main(args):
 		a0 = ''.join(hexes[56:64])
 		fetchAddr = ''.join(hexes[64:72])
 		inst = ''.join(hexes[72:80])
-		line = ''.join(hexes[80:84])
+		time_step = ''.join(hexes[80:84])
 		result = ["ra: ", ra, "sp: ", sp, "t0: ", t0, "t1: ", t1, "t2: ", t2, "s0: ", s0, "s1: ", s1, "a0: ", a0, 
-				"fetchAddr: ", fetchAddr, "inst: ", inst, "line: ", line]
+				"fetchAddr: ", fetchAddr, "inst: ", inst, "Time_Step: ", time_step]
 		results.append(result) 
 	for i in range(len(results)):
 		string2 = ' '.join(results[i])
 		print(string2)
-		print('\n')
-
 
 if __name__ == "__main__":
 	main(sys.argv)
