@@ -5,8 +5,9 @@ import re
 
 
 def main(assembly_files, num_cycles):
-
+    save_num_cycles = num_cycles
     for assembly_file in assembly_files:
+        num_cycles = save_num_cycles
         print("Making test for {}...".format(assembly_file))
 
         trace_format = "%1%\t%2%\t%5%\t%6%\t%7%\t%8%\t%9%\t%10%\t%pc%\t%inst%\t%line%\n"
