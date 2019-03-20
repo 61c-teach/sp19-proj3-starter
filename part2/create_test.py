@@ -31,13 +31,15 @@ def main(assembly_files, num_cycles):
         error_file_name = "err.log"
         # Creates ref file
         if num_cycles == -1:
-            cmd = "java -jar venus-jvm-latest.jar " + assembly_file + " -t -tf trace_format -ti -tw -ts -ur > " + ref_output + " 2> " + error_file_name
+            cmd = "java -jar venus-jvm-latest.jar " + assembly_file + " -it -t -tf trace_format -ti -tw -ts -ur > " + ref_output + " 2> " + error_file_name
         else:
-            cmd = "java -jar venus-jvm-latest.jar " + assembly_file + " -t -tf trace_format -ti -tw -ts -ur -tn " + str(num_cycles + 1) + " > " + ref_output + " 2> " + error_file_name
+            cmd = "java -jar venus-jvm-latest.jar " + assembly_file + " -it -t -tf trace_format -ti -tw -ts -ur -tn " + str(num_cycles + 1) + " > " + ref_output + " 2> " + error_file_name
         # print("Runninc command: " + cmd)
         retcode = os.system(cmd)
         os.system("rm -f trace_format")
-        if retcode:
+        with open(ref_output) as f:
+          fdata = f.read()
+        if retcode or "[ERROR]" in fdata:
             print("Failed to make a test for the file '" + assembly_file + "'! Here is the reason:")
             print("Could not get trace from venus!")
             print("Here are some more details which may help.\n")
